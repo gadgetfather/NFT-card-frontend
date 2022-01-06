@@ -1,0 +1,201 @@
+/* Importing font */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+/* color variables */
+:root{
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    
+    --main-BG: hsl(217, 54%, 11%);
+--card-BG: hsl(216, 50%, 16%);
+--line: hsl(215, 32%, 27%);
+--White: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Outfit', sans-serif;
+}
+
+/* main background */
+.canvas{
+    background-color: var(--main-BG);
+    /* color: white; */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* card design */
+.card{
+    background-color: var(--card-BG);
+    height: 35rem;
+    width: 20rem;
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+/* eth image */
+.image-box{
+    
+    height: 18rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    position: relative;
+    
+}
+
+.eth-image{
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    z-index: 0;
+}
+
+.hover-eye{}
+
+.hover-eye{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 5;
+    
+}
+
+.image-box:after{
+    content: "";
+    background-color: rgba(0, 255 , 247, 0.4);
+   height: 18rem;
+   width: 17rem;
+   top: 0;
+   border-radius: 0.5rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   display: none;
+   
+}
+
+
+/* details heading and paragraph*/
+
+.details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 5.7rem;
+    margin-bottom: 1.5rem;
+}
+
+.details h1{
+    font-size: 1.4rem ;
+    color: var(--White)
+}
+
+.details p{
+    color: var(--Soft-blue);
+    font-weight: 300;
+}
+
+/* pricing */
+.pricing{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+}
+
+.pricing .price{
+     display: flex;
+    color: var(--Cyan);
+}
+
+.pricing .price img{
+    height: 1.3rem;
+    margin-right: .5rem;
+}
+
+.pricing .time{
+    display: flex;
+    color: var(--Soft-blue);
+}
+
+.pricing .time img{
+    height: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+/* line */
+.line{
+    background-color: rgba(139, 172, 218, 0.3);
+    height: 1px;
+    margin-bottom: 1rem;
+}
+
+/* avatar box */
+.author{
+    display: flex;
+    /* justify-content: space-evenly; */
+    text-align: left;
+    text-align: center;
+}
+.avatar-box {
+    height:2rem;
+    border-radius: 50%;
+    width: 2rem;
+    border: 1px solid white;
+    margin-right: 1rem;
+}
+.avatar-image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    
+}
+/* author name */
+.author .name{
+    color: var(--White);
+    font-weight: 300;
+}
+.author p{
+    color: var(--Soft-blue);
+    font-weight: 300;
+    margin-top: .2rem;
+    
+}
+
+
+/* Hover effects */
+
+/* for author name */
+.author .name:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+/* card title */
+
+.details h1:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+/* image box */
+.image-box:hover:after{
+display: block;
+cursor: pointer;
+}
+.image-box:hover .hover-eye{
+display: block;
+cursor: pointer;
+}
